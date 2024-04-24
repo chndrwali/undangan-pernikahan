@@ -13,7 +13,6 @@ const redressed = Redressed({
 const HomeComponent = () => {
   return (
     <section className="min-h-screen bg-home bg-no-repeat bg-cover container mx-auto">
-      <div className="absolute inset-0 bg-hero opacity-50"></div>
       <div className="flex flex-col items-center">
         <div className="my-4 p-4 h-40 w-10 rounded-xl">
           <Image src="" alt="Photo wedding" className="" width={40} height={160} />
