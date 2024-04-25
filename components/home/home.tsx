@@ -47,7 +47,7 @@ const HomeComponent = () => {
                                   </div>
                                 </div>
                               </div>
-                              <div className="text-center mx-auto" style={{ maxWidth: '300px' }}>
+                              <div className="text-center mx-auto relative z-10" style={{ maxWidth: '300px' }}>
                                 <div className="text-center mb-3 p-2 animate__animated animate__zoomIn animate__slower rounded" style={{ fontSize: '14px' }}>
                                   <div className="editable mb-1">
                                     Dear
