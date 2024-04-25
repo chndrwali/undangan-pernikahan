@@ -14,6 +14,8 @@ const redressed = Redressed({
 const HomeComponent = () => {
   return (
     <>
+      {' '}
+      <div></div>
       <div className="fixed h-screen w-full overflow-hidden flex-col flex">
         <div className="fixed h-screen w-full top-0 right-0 bottom-0 left-0 transform origin-center">
           <div className="flex flex-col items-center justify-center mx-auto h-full border-8">
@@ -79,7 +81,6 @@ const HomeComponent = () => {
           </div>
         </div>
       </div>
-
       {/* <div className="flex flex-col items-center">
         <div className="my-4 p-4 h-40 w-10 rounded-xl">
           <Image src="" alt="Photo wedding" className="" width={40} height={160} />
