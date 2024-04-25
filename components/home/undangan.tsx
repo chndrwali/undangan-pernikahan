@@ -20,7 +20,7 @@ const Undangan = () => {
 
   return (
     <>
-      <span className="font-bold">{recipientName}</span>
+      <span className="font-bold text-lg mb-1">{recipientName}</span>
     </>
   );
 };
