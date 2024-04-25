@@ -12,7 +12,7 @@ const Undangan = () => {
   useEffect(() => {
     const name = params.get('to');
     if (!name) {
-      router.push('/');
+      setRecipientName('Guest name');
     } else {
       setRecipientName(name);
     }

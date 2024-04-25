@@ -1,10 +1,11 @@
+import ThanksPage from '@/components/thanks/thanksPage';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const Wedding = () => {
   return (
-    <section className="w-full h-screen">
+    <section className="w-full min-h-screen">
       <div className="flex items-center">
-        <Tabs defaultValue="quotes" className="w-[400px]">
+        <Tabs defaultValue="quotes" className="">
           <TabsContent value="quotes">Quotes</TabsContent>
           <TabsContent value="salam">Salam</TabsContent>
           <TabsContent value="bride">Bride</TabsContent>
@@ -16,7 +17,9 @@ const Wedding = () => {
           <TabsContent value="gallery">Gallery</TabsContent>
           <TabsContent value="gift">Gift</TabsContent>
           <TabsContent value="protocol">Protocol</TabsContent>
-          <TabsContent value="thanks">Thanks</TabsContent>
+          <TabsContent value="thanks">
+            <ThanksPage />
+          </TabsContent>
           <TabsList>
             <TabsTrigger value="quotes">Quotes</TabsTrigger>
             <TabsTrigger value="salam">Salam</TabsTrigger>
