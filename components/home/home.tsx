@@ -24,7 +24,7 @@ const HomeComponent = () => {
                     <li>
                       <div className="relative">
                         <div className="bg-cover min-h-screen rounded-lg" style={{ backgroundImage: 'url(/home/bg.webp)' }}>
-                          <div className="frame absolute inset-0 flex items-center justify-center">
+                          <div className="absolute inset-0 flex items-center justify-center">
                             <Image src="/home/frame-tl.webp" className="absolute top-0 left-0 w-48 h-48 rounded-tl-lg animate__animated animate__fadeInDown  animate__slower" alt="frame" width={100} height={100} />
                             <Image src="/home/frame-tr.webp" className="absolute top-0 right-0 w-48 h-48 rounded-tr-lg animate__animated animate__zoomIn animate__slower" alt="frame" width={100} height={100} />
                             <Image src="/home/frame-bl.webp" className="absolute bottom-0 left-0 w-48 h-48 rounded-bl-lg animate__animated animate__zoomIn animate__slower" alt="frame" width={100} height={100} />
@@ -58,9 +58,11 @@ const HomeComponent = () => {
                                     <Undangan />
                                   </Suspense>
                                 </div>
-                                <Button asChild className="z-index-1">
-                                  <Link href="/wedding">Open Invitation</Link>
-                                </Button>
+                                <div className="z-10">
+                                  <Button asChild className="z-10">
+                                    <Link href="/wedding">Open Invitation</Link>
+                                  </Button>
+                                </div>
                               </div>
                             </div>
                           </div>

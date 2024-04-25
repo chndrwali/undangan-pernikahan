@@ -1,5 +1,5 @@
 const Navigation = () => {
-  return <></>;
+  return <div className="w-full max-w-[400px] h-screen"></div>;
 };
 
 export default Navigation;
