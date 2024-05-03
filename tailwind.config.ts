@@ -13,6 +13,9 @@ const config = {
       },
     },
     extend: {
+      boxShadow: {
+        outline: '0 -1px 0 #9e9e9e, 1px 0 0 #9e9e9e, 0 1px 0 #9e9e9e, -1px 0 0 #9e9e9e',
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -69,6 +72,7 @@ const config = {
       },
       backgroundImage: {
         home: 'url(/home/bg.webp)',
+        footer: 'url(/home/GroovePaper.png)',
       },
     },
   },

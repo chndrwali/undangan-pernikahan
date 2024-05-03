@@ -3,8 +3,6 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Undangan from '@/components/home/undangan';
 import { Suspense } from 'react';
-import 'animate.css';
-import PageWrap from '../ui/pageWrap';
 
 const redressed = Redressed({
   subsets: ['latin'],
@@ -13,39 +11,25 @@ const redressed = Redressed({
 
 const HomeComponent = () => {
   return (
-    <PageWrap>
-      <div className="text-center editable animate__animated animate__fadeInDown animate__slower mb-1 text-sm" style={{ letterSpacing: '0.2rem' }}>
-        THE WEDDING OF
-      </div>
-      <div
-        className="mb-4 flex flex-col justify-center animate__animated animate__zoomIn animate__slower image-editable"
-        style={{ width: '80%', margin: 'auto', overflow: 'hidden', aspectRatio: '1/1', backgroundImage: 'url(/home/circle.webp)', backgroundSize: '100%' }}
-      >
-        <div className="text-center">
-          <div>
-            <h1 className={`${redressed.className} text-4xl text-center font-bold leading-none `}>
-              Ajeng <br /> & <br /> Aril
-            </h1>
-          </div>
-        </div>
-      </div>
-      <div className="text-center mx-auto relative z-10" style={{ maxWidth: '300px' }}>
-        <div className="text-center mb-3 p-2 animate__animated animate__zoomIn animate__slower rounded" style={{ fontSize: '14px' }}>
-          <div className="editable mb-1">
-            Dear
+    <>
+      <section className="w-full h-[100vh] overflow-hidden mx-auto my-0 relative">
+        <video autoPlay loop muted playsInline={true} className="bg-[#aeb8b3] opacity-90 object-cover object-center w-full h-full min-h-[480px] ">
+          <source src="/home/BackgroundVideo.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute w-full top-[20%] text-center  animate-in">
+          <p className=" text-base sm:text-xl mb-4">Wedding Invitation</p>
+          <p className={`${redressed.className} mb-4 font-bold text-2xl sm:text-3xl`}> Ramdani Aditia &#38; Yuliyana Sari</p>
+          <p className="mb-6 text-base sm:text-xl">
+            23 June 2024
             <br />
-            Mr/Ms/Brother/Sisters
-          </div>
+            Nolimit Indonesia
+          </p>
           <Suspense fallback={<span>Loading...</span>}>
             <Undangan />
           </Suspense>
         </div>
-
-        <Button asChild className="z-10">
-          <Link href="/wedding">Open Invitation</Link>
-        </Button>
-      </div>
-    </PageWrap>
+      </section>
+    </>
   );
 };
 
