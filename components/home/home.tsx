@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Undangan from '@/components/home/undangan';
 import { Suspense } from 'react';
+import Image from 'next/image';
 
 const redressed = Redressed({
   subsets: ['latin'],
@@ -17,13 +18,15 @@ const HomeComponent = () => {
           <source src="/home/BackgroundVideo.mp4" type="video/mp4" />
         </video>
         <div className="absolute w-full top-[20%] text-center  animate-in">
-          <p className=" text-base sm:text-xl mb-4">Wedding Invitation</p>
+          <Image src="" alt="RamdaniYuliyani" />
+          <p className=" text-base sm:text-xl mb-4">Undangan Pernikahan</p>
           <p className={`${redressed.className} mb-4 font-bold text-2xl sm:text-3xl`}> Ramdani Aditia &#38; Yuliyana Sari</p>
           <p className="mb-6 text-base sm:text-xl">
-            23 June 2024
+            23 Juni 2024
             <br />
             Nolimit Indonesia
           </p>
+          <p>Yth. Bapak/Ibu/Saudara/i</p>
           <Suspense fallback={<span>Loading...</span>}>
             <Undangan />
           </Suspense>
