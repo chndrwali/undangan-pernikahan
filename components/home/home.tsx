@@ -13,7 +13,7 @@ const redressed = Redressed({
 const HomeComponent = () => {
   return (
     <>
-      <section className="w-full h-[100vh] overflow-hidden mx-auto my-0 relative">
+      <section id="home" className="w-full h-screen overflow-hidden mx-auto my-0 relative">
         <video autoPlay loop muted playsInline={true} className="bg-[#aeb8b3] opacity-90 object-cover object-center w-full h-full min-h-[480px] ">
           <source src="/home/BackgroundVideo.mp4" type="video/mp4" />
         </video>

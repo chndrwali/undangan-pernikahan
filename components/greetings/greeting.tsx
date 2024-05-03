@@ -7,7 +7,7 @@ const redressed = Redressed({
 
 const Greetings = () => {
   return (
-    <section className="bg-[#efebe9] bg-footer opacity-60 w-full flex flex-col items-center">
+    <section id="mempelai" className="bg-[#efebe9] bg-footer opacity-60 w-full flex flex-col items-center">
       <div className="mt-2 mb-8">
         <p className="font-bold text-xl">Akan menikah</p>
       </div>
