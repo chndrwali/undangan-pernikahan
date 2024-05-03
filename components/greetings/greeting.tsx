@@ -8,8 +8,8 @@ const redressed = Redressed({
 const Greetings = () => {
   return (
     <section className="bg-[#efebe9] bg-footer opacity-60 w-full flex flex-col items-center">
-      <div className="mt-0 mb-8">
-        <p className="font-bold mb-0 text-xl">Akan menikah</p>
+      <div className="mt-2 mb-8">
+        <p className="font-bold text-xl">Akan menikah</p>
       </div>
       <div className="w-full text-center leading-tight max-w-[480px] mb-0">
         <p className="mb-2">
@@ -27,7 +27,7 @@ const Greetings = () => {
           </span>
         </p>
       </div>
-      <div className="text-wrap italic w-full text-center mb-4 leading-tight max-w-[480px]">
+      <div className="text-wrap pl-4 pr-4 italic w-full text-center mb-4 leading-tight max-w-[480px]">
         <blockquote>
           Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada
           yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir
