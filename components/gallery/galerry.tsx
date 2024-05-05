@@ -1,12 +1,28 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
 import { LayoutGrid } from '../ui/layout-grid';
+import { TypewriterEffect } from '../ui/type-writter';
 
 export default function Gallery() {
+  const judul = [
+    {
+      text: 'Moment',
+      className: 'text-white dark:text-blue-500',
+    },
+
+    {
+      text: 'Bahagia ',
+      className: 'text-blue-500 dark:text-blue-500',
+    },
+    {
+      text: 'Kami ',
+      className: 'text-blue-500 dark:text-blue-500',
+    },
+  ];
   return (
     <section id="galery" className="bg-black bg-footer opacity-90 w-full flex flex-col items-center h-screen">
       <div className="mt-0 mb-2">
-        <p className="font-bold  text-xl text-white">A glimpse of our Journey to Forever</p>
+        <TypewriterEffect words={judul} />
       </div>
       <div className="h-screen py-10  w-full">
         <LayoutGrid cards={cards} />
