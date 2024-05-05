@@ -31,16 +31,16 @@ const Greetings = () => {
       </div>
       <div className="w-full text-center leading-tight max-w-[480px] mb-0 text-white">
         <p className="mb-2">
-          <span className={`${redressed.className} font-bold text-base sm:text-xl md:text-3xl lg:text-5xl`}>Ramdani Aditia</span>
+          <span className={`${redressed.className} font-bold text-xl md:text-3xl lg:text-5xl`}>Ramdani Aditia</span>
           <br />
-          <span className="sm:text-sm md:text-base">
+          <span className="text-sm md:text-base">
             Putra dari pasangan <br /> Bapak Sodikin &#38; Ibu Oneng{' '}
           </span>
         </p>
         <p className="mb-2">
-          <span className={`${redressed.className} font-bold text-base sm:text-xl md:text-3xl lg:text-5xl`}>Yuliyana Sari</span>
+          <span className={`${redressed.className} font-bold text-xl md:text-3xl lg:text-5xl`}>Yuliyana Sari</span>
           <br />
-          <span className="text-xs  sm:text-sm md:text-base">
+          <span className="text-sm md:text-base">
             Putri dari pasangan <br /> Bapak Tatang &#38; Ibu Lilis Atikah{' '}
           </span>
         </p>

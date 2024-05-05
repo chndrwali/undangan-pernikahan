@@ -61,7 +61,7 @@ export const TypewriterEffect = ({
       </motion.div>
     );
   };
-  return <div className={cn('text-base sm:text-xl md:text-3xl lg:text-5xl font-bold text-center', className)}>{renderWords()}</div>;
+  return <div className={cn('text-xl md:text-3xl lg:text-5xl font-bold text-center', className)}>{renderWords()}</div>;
 };
 
 export const TypewriterEffectSmooth = ({
