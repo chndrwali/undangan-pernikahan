@@ -11,7 +11,7 @@ const Location = () => {
 
   const Alamat = 'Jl. Setra Indah Utara II No. 1A, Sukagalih, Kec. Sukajadi, Kota Bandung, Jawa Barat 40163';
   return (
-    <section id="lokasi" className="bg-[#efebe9] bg-footer opacity-60 w-full flex flex-col items-center">
+    <section id="lokasi" className="bg-black text-white bg-footer opacity-90 w-full flex flex-col items-center">
       <div className="mt-0 mb-8">
         <p className="font-bold mb-0 text-xl">Lokasi </p>
       </div>

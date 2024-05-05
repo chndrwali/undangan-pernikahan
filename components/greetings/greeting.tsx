@@ -17,6 +17,7 @@ const Greetings = () => {
   const judul = [
     {
       text: 'Akan',
+      className: 'text-white',
     },
     {
       text: 'Menikah',
@@ -24,16 +25,16 @@ const Greetings = () => {
     },
   ];
   return (
-    <section id="mempelai" className="bg-[#efebe9] bg-footer opacity-60 w-full flex flex-col items-center">
-      <div className="mt-2 mb-8">
+    <section id="mempelai" className="bg-black bg-footer opacity-90 w-full flex flex-col items-center">
+      <div className="mt-2 mb-8 ">
         <TypewriterEffect words={judul} />
       </div>
-      <div className="w-full text-center leading-tight max-w-[480px] mb-0">
+      <div className="w-full text-center leading-tight max-w-[480px] mb-0 text-white">
         <p className="mb-2">
           <span className={`${redressed.className} font-bold text-base sm:text-xl md:text-3xl lg:text-5xl`}>Ramdani Aditia</span>
           <br />
           <span className="sm:text-sm md:text-base">
-            Putra dari pasangan <br /> Bapak Sodikan &#38; Ibu Oneng{' '}
+            Putra dari pasangan <br /> Bapak Sodikin &#38; Ibu Oneng{' '}
           </span>
         </p>
         <p className="mb-2">
@@ -44,7 +45,7 @@ const Greetings = () => {
           </span>
         </p>
       </div>
-      <div className="text-wrap text-center pl-4 pr-4 italic w-full  mb-4 leading-tight max-w-[480px]">
+      <div className="text-wrap text-center pl-4 pr-4 italic w-full  mb-4 leading-tight max-w-[480px] ">
         <blockquote>
           <TextGenerateEffect words={words} />
         </blockquote>

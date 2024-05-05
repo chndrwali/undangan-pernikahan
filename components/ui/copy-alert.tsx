@@ -17,7 +17,7 @@ export const CopyAlert: React.FC<CopyAlertProps> = ({ description, cp }) => {
     <div className="flex items-center">
       <blockquote>{description}</blockquote>
       <Button variant="outline" size="sm" onClick={() => onCopy(description)}>
-        <Copy className="h-4 w-4" />
+        <Copy className="h-4 w-4 text-black" />
       </Button>
     </div>
   );

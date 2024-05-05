@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import Undangan from '@/components/home/undangan';
 import { TypewriterEffect } from '../ui/type-writter';
 import { ImagesSlider } from '../ui/image-slider';
+import { useRouter } from 'next/navigation';
 
 const redressed = Redressed({
   subsets: ['latin'],
@@ -16,6 +17,7 @@ const redressed = Redressed({
 });
 
 const HomeComponent = () => {
+  const router = useRouter();
   const judul = [
     {
       text: 'Undangan',
@@ -29,6 +31,10 @@ const HomeComponent = () => {
   ];
 
   const images = ['/home/Gallery_Photo_1.jpeg', '/home/Gallery_Photo_2.jpeg', '/home/Gallery_Photo_3.jpeg'];
+
+  const OnClick = () => {
+    router.push('#mempelai');
+  };
   return (
     <ImagesSlider className="h-screen" images={images}>
       <motion.div
@@ -39,20 +45,35 @@ const HomeComponent = () => {
           duration: 0.8,
           ease: 'easeInOut',
         }}
+        id="home"
         className="absolute w-full top-[20%] text-center z-50 text-white "
       >
-        <Image src="" alt="RamdaniYuliyani" />
         <TypewriterEffect words={judul} />
-        <p className={`${redressed.className} mb-4 font-bold text-2xl sm:text-3xl`}> Ramdani Aditia &#38; Yuliyana Sari</p>
+        <div>
+          <Image src="" alt="RamdaniYuliyani" />
+        </div>
+        <div className={`${redressed.className} mb-4 font-bold text-2xl sm:text-3xl`}>
+          <span>Ramdani Aditia</span>
+          <br />
+          <span className="text-5xl">&#38;</span>
+          <br />
+          <span>Yuliyana Sari</span>
+        </div>
         <p className="mb-6 text-base sm:text-xl">
           23 Juni 2024
           <br />
-          Nolimit Indonesia
+          NoLimit Indonesia
         </p>
         <p>Yth. Bapak/Ibu/Saudara/i</p>
         <Suspense fallback={<span>Loading...</span>}>
           <Undangan />
         </Suspense>
+        <div className="my-4 ">
+          <Button className="rounded-full bg-white hover:bg-white/50 text-black border border-blue-500" onClick={OnClick}>
+            {' '}
+            Lihat Undangan
+          </Button>
+        </div>
       </motion.div>
     </ImagesSlider>
   );
