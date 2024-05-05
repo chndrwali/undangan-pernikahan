@@ -15,6 +15,11 @@ export function FloatingNavDemo() {
       icon: <User className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
+      name: 'Kutipan',
+      link: '#quotes',
+      icon: <User className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+    {
       name: 'Gallery',
       link: '#galery',
       icon: <MessageCircle className="h-4 w-4 text-neutral-500 dark:text-white" />,
