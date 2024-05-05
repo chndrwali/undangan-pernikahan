@@ -30,7 +30,7 @@ const HomeComponent = () => {
     },
   ];
 
-  const images = ['/home/Gallery_Photo_1.jpeg', '/home/Gallery_Photo_2.jpeg', '/home/Gallery_Photo_3.jpeg'];
+  const images = ['/home/Gallery_Photo_1.jpeg', '/home/Gallery_Photo_2.jpeg', '/home/Gallery_Photo_4.jpeg'];
 
   const OnClick = () => {
     router.push('#mempelai');
@@ -46,11 +46,15 @@ const HomeComponent = () => {
           ease: 'easeInOut',
         }}
         id="home"
-        className="absolute w-full top-[20%] text-center z-50 text-white "
+        className="absolute w-full top-[10%] flex flex-col items-center  text-center z-50 text-white "
       >
         <TypewriterEffect words={judul} />
-        <div>
-          <Image src="" alt="RamdaniYuliyani" />
+        <div className=" w-full max-w-[50px] min-h-[100px] h-full  text-black bg-white rounded-full my-4">
+          <div className="flex flex-col items-center p-2">
+            <span className="text-[1.7rem]">R</span>
+            <hr className="w-full h-[2px] border border-black" />
+            <span className="text-[1.7rem]">Y</span>
+          </div>
         </div>
         <div className={`${redressed.className} mb-4 font-bold text-2xl sm:text-3xl`}>
           <span>Ramdani Aditia</span>
