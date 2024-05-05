@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { CopyAlert } from '../ui/copy-alert';
+import { TypewriterEffect } from '../ui/type-writter';
 
 const Location = () => {
   const mapUrl =
@@ -10,10 +11,17 @@ const Location = () => {
   const shareUrl = 'https://maps.app.goo.gl/RqnsdRiMLLyKtpej8';
 
   const Alamat = 'Jl. Setra Indah Utara II No. 1A, Sukagalih, Kec. Sukajadi, Kota Bandung, Jawa Barat 40163';
+
+  const judul = [
+    {
+      text: 'Lokasi',
+      className: 'text-white',
+    },
+  ];
   return (
-    <section id="lokasi" className="bg-black text-white bg-footer opacity-90 w-full flex flex-col items-center">
+    <section id="lokasi" className="bg-black text-white bg-footer opacity-90 w-full h-screen flex flex-col items-center">
       <div className="mt-0 mb-8">
-        <p className="font-bold mb-0 text-xl">Lokasi </p>
+        <TypewriterEffect words={judul} />
       </div>
       <div className="rounded-lg mb-4 shadow-2xl">
         <iframe className="rounded-lg" src={mapUrl} width="300" height="200" style={{ border: 0 }} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
