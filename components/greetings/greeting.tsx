@@ -1,4 +1,6 @@
 import { Redressed } from 'next/font/google';
+import { TextGenerateEffect } from '../ui/text-generate-effect';
+import { TypewriterEffect } from '../ui/type-writter';
 
 const redressed = Redressed({
   subsets: ['latin'],
@@ -6,32 +8,45 @@ const redressed = Redressed({
 });
 
 const Greetings = () => {
+  const words = `
+  Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada
+  yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir
+  - QS. Ar-Rum 21
+`;
+
+  const judul = [
+    {
+      text: 'Akan',
+    },
+    {
+      text: 'Menikah',
+      className: 'text-blue-500 dark:text-blue-500',
+    },
+  ];
   return (
     <section id="mempelai" className="bg-[#efebe9] bg-footer opacity-60 w-full flex flex-col items-center">
       <div className="mt-2 mb-8">
-        <p className="font-bold text-xl">Akan menikah</p>
+        <TypewriterEffect words={judul} />
       </div>
       <div className="w-full text-center leading-tight max-w-[480px] mb-0">
         <p className="mb-2">
-          <span className={`${redressed.className} font-bold text-xl`}>Ramdani Aditia</span>
+          <span className={`${redressed.className} font-bold text-base sm:text-xl md:text-3xl lg:text-5xl`}>Ramdani Aditia</span>
           <br />
-          <span>
+          <span className="sm:text-sm md:text-base">
             Putra dari pasangan <br /> Bapak Sodikan &#38; Ibu Oneng{' '}
           </span>
         </p>
         <p className="mb-2">
-          <span className={`${redressed.className} font-bold text-xl`}>Yuliyana Sari</span>
+          <span className={`${redressed.className} font-bold text-base sm:text-xl md:text-3xl lg:text-5xl`}>Yuliyana Sari</span>
           <br />
-          <span>
+          <span className="text-xs  sm:text-sm md:text-base">
             Putri dari pasangan <br /> Bapak Tatang &#38; Ibu Lilis Atikah{' '}
           </span>
         </p>
       </div>
-      <div className="text-wrap pl-4 pr-4 italic w-full text-center mb-4 leading-tight max-w-[480px]">
+      <div className="text-wrap text-center pl-4 pr-4 italic w-full  mb-4 leading-tight max-w-[480px]">
         <blockquote>
-          Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada
-          yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir
-          <br />- QS. Ar-Rum 21{' '}
+          <TextGenerateEffect words={words} />
         </blockquote>
       </div>
     </section>
