@@ -14,8 +14,16 @@ const Location = () => {
 
   const judul = [
     {
-      text: 'Lokasi',
+      text: 'Waktu',
       className: 'text-white',
+    },
+    {
+      text: '&',
+      className: 'text-white',
+    },
+    {
+      text: 'Tempat',
+      className: 'text-blue-500',
     },
   ];
   return (

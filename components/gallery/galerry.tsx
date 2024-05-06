@@ -24,7 +24,7 @@ export default function Gallery() {
       <div className="mt-0 mb-2">
         <TypewriterEffect words={judul} />
       </div>
-      <div className="h-screen py-10  w-full">
+      <div className="h-screen py-4 px-10 w-full">
         <LayoutGrid cards={cards} />
       </div>
     </section>

@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 export const TypewriterEffect = ({
   words,
   className,
+  renderDivider = false,
 }: {
   words: {
     text: string;
@@ -14,6 +15,7 @@ export const TypewriterEffect = ({
   }[];
   className?: string;
   cursorClassName?: string;
+  renderDivider?: boolean;
 }) => {
   // split text inside of words into array of characters
   const wordsArray = words.map((word) => {
@@ -72,6 +74,7 @@ export const TypewriterEffect = ({
             </div>
           );
         })}
+        {renderDivider && <hr className="w-full h-[2px] border border-white" />}
       </motion.div>
     );
   };
