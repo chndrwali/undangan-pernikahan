@@ -5,6 +5,7 @@ import { TypewriterEffect } from '../ui/type-writter';
 import { motion } from 'framer-motion';
 import { TextGenerateEffect } from '../ui/text-generate-effect';
 import Image from 'next/image';
+import { Instagram } from 'lucide-react';
 
 const redressed = Redressed({
   subsets: ['latin'],
@@ -30,14 +31,16 @@ const Greetings = () => {
         <TypewriterEffect words={judul} />
         <TextGenerateEffect className="text-center px-0 sm:px-20" words={desc} />
       </div>
-      <div>
-        <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
-          <aside className="relative block h-16 lg:order-last lg:col-span-5 lg:h-full xl:col-span-6">
-            <Image alt="" src="/home/laki_latarbiru.jpg" width={500} height={500} className="absolute inset-0 h-full w-full object-cover" />
-          </aside>
+      <section className=" w-full max-w-[700px]">
+        <div className="flex flex-row">
+          <section className="w-1/2 p-4 ">
+            <div className="w-[200px] h-[300px] rounded-3xl">
+              <Image alt="" src="/home/laki_latarbiru.jpg" width={500} height={500} className=" rounded-3xl h-full w-full object-cover opacity-80" />
+            </div>
+          </section>
 
-          <main className="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6">
-            <div className="max-w-xl lg:max-w-3xl">
+          <main className="w-1/2">
+            <div className="p-4">
               <motion.div
                 initial={{ opacity: 0.0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -46,20 +49,27 @@ const Greetings = () => {
                   duration: 0.8,
                   ease: 'easeInOut',
                 }}
-                className="w-full text-center leading-tight max-w-[480px] mb-0 text-white"
+                className="w-full text-end leading-tight max-w-[480px] mb-0 text-white"
               >
                 <p className="mb-2">
-                  <span className={`${redressed.className} font-bold text-xl md:text-3xl lg:text-5xl`}>Ramdani Aditia</span>
-                  <br />
-                  <span className="text-sm md:text-base">
-                    Putra dari pasangan <br /> Bapak Sodikin &#38; Ibu Oneng{' '}
-                  </span>
+                  <span className={`${redressed.className} font-bold text-end text-xl md:text-3xl lg:text-5xl`}>Ramdani Aditia</span>
+                  <hr />
+
+                  <p className="text-sm md:text-base text-end">
+                    <span className="font-bold">Putra dari pasangan</span>
+                    <br /> Bapak Sodikin <br /> & Ibu Oneng{' '}
+                  </p>
+                  <p className="flex justify-end items-center">
+                    <Instagram size={15} />
+                    <span className="ml-2">instagram</span>
+                  </p>
                 </p>
               </motion.div>
             </div>
           </main>
         </div>
-      </div>
+      </section>
+
       <p className="text-center relative text-muted-foreground w-full max-w-6xl px-4 my-4">
         <span className="relative z-10 bg-black bg-footer px-4 text-white text-xl">d e n g a n</span>
         <span className="absolute left-0 right-0 top-1/2 h-[1px] bg-slate-300 z-0"></span>
