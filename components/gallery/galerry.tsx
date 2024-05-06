@@ -2,6 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { LayoutGrid } from '../ui/layout-grid';
 import { TypewriterEffect } from '../ui/type-writter';
+import { motion } from 'framer-motion';
 
 export default function Gallery() {
   const judul = [
@@ -23,7 +24,9 @@ export default function Gallery() {
     <section id="galery" className="bg-black bg-footer opacity-90 w-full flex flex-col items-center ">
       <div className="mt-0 mb-2">
         <TypewriterEffect words={judul} />
-        <p className="text-white text-xl">“Aku tidak tahu dimana ujung perjalanan ini, aku tidak bisa menjanjikan apapun. Tapi, selama aku mampu, mimpi-mimpi kita adalah prioritas.”</p>
+        <motion.p initial={{ opacity: 0.0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="text-white text-xl text-center px-4">
+          “Aku tidak tahu dimana ujung perjalanan ini, aku tidak bisa menjanjikan apapun. Tapi, selama aku mampu, mimpi-mimpi kita adalah prioritas.”
+        </motion.p>
       </div>
       <div className="h-screen py-4 px-10 w-full">
         <LayoutGrid cards={cards} />

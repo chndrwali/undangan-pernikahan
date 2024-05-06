@@ -1,4 +1,6 @@
+'use client';
 import { Redressed } from 'next/font/google';
+import { motion } from 'framer-motion';
 
 const redressed = Redressed({
   subsets: ['latin'],
@@ -9,10 +11,24 @@ const Thanks = () => {
   return (
     <section className="bg-black bg-footer opacity-90 w-full flex flex-col items-center">
       <div className="flex flex-col items-center text-center text-white top-[10%]">
-        <h1 className="text-2xl sm:text-4xl uppercase">Terima Kasih </h1>
-        <p className="text-2xl sm:text-4xl uppercase">Atas kehadiran dan doa restunya</p>
-        <p className="text-2xl sm:text-4xl uppercase">Kami yang berbahagia</p>
-        <h1 className={`${redressed.className} text-4xl sm:text-7xl my-12`}>Ramdani & Yuli</h1>
+        <motion.h1 initial={{ opacity: 0.0, y: -40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="text-2xl sm:text-4xl uppercase">
+          Terima Kasih{' '}
+        </motion.h1>
+        <motion.p initial={{ opacity: 0.0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="text-2xl sm:text-4xl uppercase">
+          Atas kehadiran dan doa restunya
+        </motion.p>
+        <motion.p initial={{ opacity: 0.0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="text-2xl sm:text-4xl uppercase">
+          Kami yang berbahagia
+        </motion.p>
+        <motion.h1 initial={{ opacity: 0.0, y: -40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className={`${redressed.className} text-4xl sm:text-7xl my-12`}>
+          <motion.span initial={{ opacity: 0.0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }}>
+            Ramdani
+          </motion.span>
+          &
+          <motion.span initial={{ opacity: 0.0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }}>
+            Yuli
+          </motion.span>
+        </motion.h1>
       </div>
     </section>
   );

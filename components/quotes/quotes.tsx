@@ -46,9 +46,9 @@ const Quotes = () => {
         >
           QS. Ar-Rum: 21
         </motion.span>
-        <div className="w-[100px] h-[100px] mt-4">
+        <motion.div initial={{ opacity: 0.0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="w-[100px] h-[100px] mt-4">
           <Image src="/home/noun-flower.png" alt="" width={200} height={200} className="object-cover" />
-        </div>
+        </motion.div>
       </div>
     </ImagesSlider>
   );

@@ -2,7 +2,7 @@
 
 import { Suspense, useEffect, useRef, useState } from 'react';
 import { Redressed } from 'next/font/google';
-import { motion } from 'framer-motion';
+import { delay, motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import Undangan from '@/components/home/undangan';
 import { TypewriterEffect } from '../ui/type-writter';
@@ -82,13 +82,22 @@ const HomeComponent = () => {
           className="absolute w-full top-[5%] flex flex-col items-center  text-center z-50 text-white "
         >
           <TypewriterEffect words={judul} />
-          <div className=" w-full max-w-[50px] min-h-[100px] h-full  text-black bg-white rounded-full my-4">
+          <motion.div
+            initial={{ opacity: 0.0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }}
+            className=" w-full max-w-[50px] min-h-[100px] h-full  text-black bg-white rounded-full my-4"
+          >
             <div className="flex flex-col items-center p-2">
-              <span className="text-[1.7rem]">R</span>
-              <hr className="w-full h-[2px] border border-black" />
-              <span className="text-[1.7rem]">Y</span>
+              <motion.span initial={{ opacity: 0.0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="text-[1.7rem]">
+                R
+              </motion.span>
+              <motion.hr initial={{ opacity: 0.0, y: -40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="w-full h-[2px] border border-black" />
+              <motion.span initial={{ opacity: 0.0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="text-[1.7rem]">
+                Y
+              </motion.span>
             </div>
-          </div>
+          </motion.div>
           <div className={`${redressed.className} mb-4 font-bold text-2xl sm:text-3xl`}>
             <span>Ramdani Aditia</span>
             <br />
@@ -109,12 +118,15 @@ const HomeComponent = () => {
             Tanpa mengurangi rasa hormat, <br />
             kami mengundang anda untuk menghadiri <br /> acara pernikahan kami.
           </p>
-          <div className="my-4 ">
+          <motion.div initial={{ opacity: 0.0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="my-4 ">
             <Button className="rounded-full bg-white hover:bg-transparent hover:text-white text-black border border-blue-500" onClick={OnClick}>
               {' '}
-              <Mail size={20} className="mx-2" /> Lihat Undangan
+              <Mail size={20} className="mx-2" />
+              <motion.span initial={{ opacity: 0.0, y: -40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }}>
+                Lihat Undangan
+              </motion.span>
             </Button>
-          </div>
+          </motion.div>
         </motion.div>
       </ImagesSlider>
       <Greetings />
