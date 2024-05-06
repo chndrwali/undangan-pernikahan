@@ -21,13 +21,7 @@ const Thanks = () => {
           Kami yang berbahagia
         </motion.p>
         <motion.h1 initial={{ opacity: 0.0, y: -40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className={`${redressed.className} text-4xl sm:text-7xl my-12`}>
-          <motion.span initial={{ opacity: 0.0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }}>
-            Ramdani
-          </motion.span>
-          &
-          <motion.span initial={{ opacity: 0.0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }}>
-            Yuli
-          </motion.span>
+          Ramdani & Yuli
         </motion.h1>
       </div>
     </section>
