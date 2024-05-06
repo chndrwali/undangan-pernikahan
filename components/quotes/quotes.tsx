@@ -21,7 +21,7 @@ const Quotes = () => {
     },
   ];
 
-  const images = ['/home/Gallery_Photo_1.jpeg', '/home/Gallery_Photo_2.jpeg', '/home/Gallery_Photo_4.jpeg'];
+  const images = ['/home/1.jpg', '/home/2.jpg', '/home/3.jpg'];
   return (
     <ImagesSlider className="h-screen" images={images}>
       <div className=" absolute w-full top-[5%] flex flex-col items-center  text-center z-50 text-white">
