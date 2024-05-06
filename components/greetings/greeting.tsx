@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { TextGenerateEffect } from '../ui/text-generate-effect';
 import Image from 'next/image';
 import { Instagram } from 'lucide-react';
+import Link from 'next/link';
 
 const redressed = Redressed({
   subsets: ['latin'],
@@ -59,10 +60,10 @@ const Greetings = () => {
                     <span className="font-bold">Putra dari pasangan</span>
                     <br /> Bapak Sodikin <br /> & Ibu Oneng{' '}
                   </p>
-                  <p className="flex justify-end items-center">
+                  <Link href="https://www.instagram.com/ramdaniaditia_" target="_blank" className="flex justify-end items-center">
                     <Instagram size={15} />
-                    <span className="ml-2">instagram</span>
-                  </p>
+                    <span className="ml-2">@ramdaniaditia_</span>
+                  </Link>
                 </p>
               </motion.div>
             </div>
@@ -97,10 +98,10 @@ const Greetings = () => {
                     <span className="font-bold">Putri dari pasangan</span>
                     <br /> Bapak Tatang <br /> &#38; Ibu Lilis Atikah{' '}
                   </p>
-                  <p className="flex justify-start items-center">
+                  <Link href="https://www.instagram.com/yuliynsrr/" target="_blank" className="flex justify-end items-center">
                     <Instagram size={15} />
-                    <span className="ml-2">instagram</span>
-                  </p>
+                    <span className="ml-2">@yuliynsrr</span>
+                  </Link>
                 </p>
               </motion.div>
             </div>
