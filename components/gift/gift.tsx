@@ -6,6 +6,7 @@ import { Button } from '../ui/button';
 import { GiftIcon } from 'lucide-react';
 import { useState } from 'react';
 import { Dialog, DialogContent } from '@mui/material';
+import { CopyAlert } from '../ui/copy-alert';
 
 const Gift = () => {
   const [openDialog, setOpenDialog] = useState(false);
@@ -31,15 +32,21 @@ const Gift = () => {
   ];
   const payment = [
     {
-      text: 'Info ',
-      className: 'text-white dark:text-blue-500',
+      text: 'Amplop',
+      className: 'text-black dark:text-blue-500',
     },
 
     {
-      text: 'E-Wallet ',
+      text: 'Digital',
       className: 'text-blue-500 dark:text-blue-500',
     },
   ];
+
+  const Rekening = '12345678 ';
+  const Rekening1 = '12345678 ';
+  const Rekening2 = '12345678 ';
+  const Rekening3 = '12345678 ';
+
   return (
     <section id="donasi" className="bg-black bg-footer opacity-90 w-full h-screen flex flex-col items-center ">
       <div className="flex flex-col items-center w-full max-w-xl  border-4">
@@ -60,10 +67,49 @@ const Gift = () => {
         </div>
       </div>
       <Dialog open={openDialog} onClose={handleCloseDialog}>
-        <DialogContent className="bg-black text-white " sx={{ width: '550px' }}>
+        <DialogContent className="bg-white text-black ">
           <div className="flex flex-col items-center">
             <TypewriterEffect words={payment} />
-            <div></div>
+            <div className="flex flex-col sm:flex-row items-center mt-4">
+              <div className="w-full max-w-24 rounded-2xl p-4 ">
+                <Image src="/home/bca.jpg" alt="" width={200} height={200} className="object-cover" />
+              </div>
+              <div>
+                <CopyAlert description={`${Rekening}`} cp="Rekening" text="Salin Rekening" />
+                <span className="uppercase text-xs">atas nama</span>
+                <p className="font-black ">Guest</p>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center mt-4">
+              <div className="w-full max-w-24 rounded-2xl p-4 ">
+                <Image src="/home/bri.png" alt="" width={200} height={200} className="object-cover" />
+              </div>
+              <div>
+                <CopyAlert description={`${Rekening1}`} cp="Rekening" text="Salin Rekening" />
+                <span className="uppercase text-xs">atas nama</span>
+                <p className="font-black ">Guest</p>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center mt-4">
+              <div className="w-full max-w-24 rounded-2xl p-4 ">
+                <Image src="/home/mandiri.png" alt="" width={200} height={200} className="object-cover" />
+              </div>
+              <div>
+                <CopyAlert description={`${Rekening2}`} cp="Rekening" text="Salin Rekening" />
+                <span className="uppercase text-xs">atas nama</span>
+                <p className="font-black ">Guest</p>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center mt-4">
+              <div className="w-full max-w-24 rounded-2xl p-4 ">
+                <Image src="/home/seabank.png" alt="" width={200} height={200} className="object-cover" />
+              </div>
+              <div>
+                <CopyAlert description={`${Rekening3}`} cp="Rekening" text="Salin Rekening" />
+                <span className="uppercase text-xs">atas nama</span>
+                <p className="font-black ">Guest</p>
+              </div>
+            </div>
           </div>
         </DialogContent>
       </Dialog>
