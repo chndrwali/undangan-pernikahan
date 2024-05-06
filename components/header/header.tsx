@@ -1,6 +1,6 @@
 'use client';
 
-import { HomeIcon, MessageCircle, User } from 'lucide-react';
+import { Heart, HomeIcon, Images, MapPinned, User } from 'lucide-react';
 import { FloatingNav } from '../ui/floating-nav';
 export function FloatingNavDemo() {
   const navItems = [
@@ -17,17 +17,17 @@ export function FloatingNavDemo() {
     {
       name: 'Kutipan',
       link: '#quotes',
-      icon: <User className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <Heart className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
       name: 'Gallery',
       link: '#galery',
-      icon: <MessageCircle className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <Images className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
       name: 'Lokasi',
       link: '#lokasi',
-      icon: <MessageCircle className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <MapPinned className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
   ];
   return (
