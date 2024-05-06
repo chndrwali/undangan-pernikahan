@@ -15,6 +15,8 @@ import Quotes from '../quotes/quotes';
 import Gallery from '../gallery/galerry';
 import Location from '../location/location';
 import Footer from '../Footer/footer';
+import Gift from '../gift/gift';
+import Thanks from '../thanks/thanks';
 
 const redressed = Redressed({
   subsets: ['latin'],
@@ -119,6 +121,8 @@ const HomeComponent = () => {
       <Quotes />
       <Gallery />
       <Location />
+      <Gift />
+      <Thanks />
       <Footer />
       <MusicButton audioRef={audioRef} isPlaying={isPlaying} togglePlayPause={togglePlayPause} />
     </>
