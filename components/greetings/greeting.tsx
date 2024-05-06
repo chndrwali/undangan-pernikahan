@@ -28,7 +28,7 @@ const Greetings = () => {
     <section id="mempelai" className="bg-black bg-footer opacity-90 w-full flex flex-col items-center">
       <div className="mt-2 mb-8 ">
         <TypewriterEffect words={judul} />
-        <TextGenerateEffect className="text-center px-20" words={desc} />
+        <TextGenerateEffect className="text-center px-0 sm:px-20" words={desc} />
       </div>
       <div>
         <div className="lg:grid lg:min-h-screen lg:grid-cols-12">

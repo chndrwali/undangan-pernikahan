@@ -26,7 +26,7 @@ const Quotes = () => {
       </div>
       <div className="text-wrap px-4 italic w-full  mb-4 leading-tight ">
         <blockquote>
-          <TextGenerateEffect className="px-20" words={words} />
+          <TextGenerateEffect className="px-0 sm:px-20" words={words} />
         </blockquote>
       </div>
       <motion.span
