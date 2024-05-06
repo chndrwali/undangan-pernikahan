@@ -31,11 +31,11 @@ const Greetings = () => {
         <TypewriterEffect words={judul} />
         <TextGenerateEffect className="text-center px-0 sm:px-20" words={desc} />
       </div>
-      <section className=" w-full max-w-[700px]">
+      <section className=" w-full max-w-auto md:max-w-[700px]">
         <div className="flex flex-row">
           <section className="w-1/2 p-4 ">
             <div className="w-[200px] h-[300px] rounded-3xl">
-              <Image alt="" src="/home/laki_latarbiru.jpg" width={500} height={500} className=" rounded-3xl h-full w-full object-cover opacity-80" />
+              <Image alt="" src="/home/laki_latarbiru.webp" width={500} height={500} className=" rounded-3xl h-full w-full object-cover opacity-80" />
             </div>
           </section>
 
@@ -75,7 +75,7 @@ const Greetings = () => {
         <span className="absolute left-0 right-0 top-1/2 h-[1px] bg-slate-300 z-0"></span>
       </p>
 
-      <section className=" w-full max-w-[700px]">
+      <section className=" w-full max-w-auto md:max-w-[700px]">
         <div className="flex flex-row">
           <main className="w-1/2">
             <div className="p-4">
@@ -107,7 +107,7 @@ const Greetings = () => {
           </main>
           <section className="w-1/2 p-4 ">
             <div className="w-[200px] h-[300px] rounded-3xl">
-              <Image alt="" src="/home/cewe-latarbiru.jpg" width={500} height={500} className=" rounded-3xl h-full w-full object-cover opacity-80" />
+              <Image alt="" src="/home/cewe-latarbiru.webp" width={500} height={500} className=" rounded-3xl h-full w-full object-cover opacity-80" />
             </div>
           </section>
         </div>

@@ -72,7 +72,7 @@ const config = {
       },
       backgroundImage: {
         home: 'url(/home/bg.webp)',
-        footer: 'url(/home/GroovePaper.png)',
+        footer: 'url(/home/GroovePaper.webp)',
       },
     },
   },

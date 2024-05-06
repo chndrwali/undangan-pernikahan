@@ -38,7 +38,7 @@ const HomeComponent = () => {
     },
   ];
 
-  const images = ['/home/Gallery_Photo_1.jpeg', '/home/Gallery_Photo_2.jpeg', '/home/Gallery_Photo_4.jpeg'];
+  const images = ['/home/Gallery_Photo_1.webp', '/home/Gallery_Photo_2.webp', '/home/Gallery_Photo_4.webp'];
 
   const togglePlayPause = () => {
     if (audioRef.current) {
