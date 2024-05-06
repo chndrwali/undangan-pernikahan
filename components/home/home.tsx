@@ -8,7 +8,7 @@ import Undangan from '@/components/home/undangan';
 import { TypewriterEffect } from '../ui/type-writter';
 import { ImagesSlider } from '../ui/image-slider';
 import { useRouter } from 'next/navigation';
-import { Mail } from 'lucide-react';
+import { Mail, Music } from 'lucide-react';
 
 const redressed = Redressed({
   subsets: ['latin'],

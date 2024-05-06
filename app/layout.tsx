@@ -3,6 +3,7 @@ import { Outfit } from 'next/font/google';
 import './globals.css';
 import { Toaster } from 'react-hot-toast';
 import { FloatingNavDemo } from '@/components/header/header';
+import MusicButton from '@/components/home/music-button';
 
 const outfit = Outfit({ subsets: ['latin'] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={outfit.className}>
         <Toaster />
         <main>{children}</main>
+        <MusicButton />
       </body>
     </html>
   );

@@ -60,8 +60,8 @@ const Greetings = () => {
           </main>
         </div>
       </div>
-      <p className="text-center relative text-muted-foreground w-full px-4 my-4">
-        <span className="relative z-10 bg-black px-4 text-white">Dengan</span>
+      <p className="text-center relative text-muted-foreground w-full max-w-6xl px-4 my-4">
+        <span className="relative z-10 bg-black bg-footer px-4 text-white text-xl">d e n g a n</span>
         <span className="absolute left-0 right-0 top-1/2 h-[1px] bg-slate-300 z-0"></span>
       </p>
 
