@@ -20,9 +20,10 @@ export default function Gallery() {
     },
   ];
   return (
-    <section id="galery" className="bg-black bg-footer opacity-90 w-full flex flex-col items-center h-screen">
+    <section id="galery" className="bg-black bg-footer opacity-90 w-full flex flex-col items-center ">
       <div className="mt-0 mb-2">
         <TypewriterEffect words={judul} />
+        <p className="text-white">“Aku tidak tahu dimana ujung perjalanan ini, aku tidak bisa menjanjikan apapun. Tapi, selama aku mampu, mimpi-mimpi kita adalah prioritas.”</p>
       </div>
       <div className="h-screen py-4 px-10 w-full">
         <LayoutGrid cards={cards} />
