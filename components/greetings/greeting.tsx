@@ -75,24 +75,43 @@ const Greetings = () => {
         <span className="absolute left-0 right-0 top-1/2 h-[1px] bg-slate-300 z-0"></span>
       </p>
 
-      <motion.div
-        initial={{ opacity: 0.0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.3,
-          duration: 0.8,
-          ease: 'easeInOut',
-        }}
-        className="w-full text-center leading-tight max-w-[480px] mb-0 text-white"
-      >
-        <p className="mb-2">
-          <span className={`${redressed.className} font-bold text-xl md:text-3xl lg:text-5xl`}>Yuliyana Sari</span>
-          <br />
-          <span className="text-sm md:text-base">
-            Putri dari pasangan <br /> Bapak Tatang &#38; Ibu Lilis Atikah{' '}
-          </span>
-        </p>
-      </motion.div>
+      <section className=" w-full max-w-[700px]">
+        <div className="flex flex-row">
+          <main className="w-1/2">
+            <div className="p-4">
+              <motion.div
+                initial={{ opacity: 0.0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 0.3,
+                  duration: 0.8,
+                  ease: 'easeInOut',
+                }}
+                className="w-full text-start leading-tight max-w-[480px] mb-0 text-white"
+              >
+                <p className="mb-2">
+                  <span className={`${redressed.className} font-bold text-start text-xl md:text-3xl lg:text-5xl`}>Yuliyana Sari</span>
+                  <hr />
+
+                  <p className="text-sm md:text-base text-start">
+                    <span className="font-bold">Putri dari pasangan</span>
+                    <br /> Bapak Tatang <br /> &#38; Ibu Lilis Atikah{' '}
+                  </p>
+                  <p className="flex justify-start items-center">
+                    <Instagram size={15} />
+                    <span className="ml-2">instagram</span>
+                  </p>
+                </p>
+              </motion.div>
+            </div>
+          </main>
+          <section className="w-1/2 p-4 ">
+            <div className="w-[200px] h-[300px] rounded-3xl">
+              <Image alt="" src="/home/cewe-latarbiru.jpg" width={500} height={500} className=" rounded-3xl h-full w-full object-cover opacity-80" />
+            </div>
+          </section>
+        </div>
+      </section>
     </section>
   );
 };
