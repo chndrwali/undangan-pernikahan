@@ -60,6 +60,10 @@ const Greetings = () => {
           </main>
         </div>
       </div>
+      <p className="text-center relative text-muted-foreground w-full px-4 my-4">
+        <span className="relative z-10 bg-black px-4 text-white">Dengan</span>
+        <span className="absolute left-0 right-0 top-1/2 h-[1px] bg-slate-300 z-0"></span>
+      </p>
 
       <motion.div
         initial={{ opacity: 0.0, y: 40 }}

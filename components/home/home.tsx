@@ -1,15 +1,14 @@
 'use client';
 
-import { Suspense } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 import { Redressed } from 'next/font/google';
-import Link from 'next/link';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import Undangan from '@/components/home/undangan';
 import { TypewriterEffect } from '../ui/type-writter';
 import { ImagesSlider } from '../ui/image-slider';
 import { useRouter } from 'next/navigation';
+import { Mail } from 'lucide-react';
 
 const redressed = Redressed({
   subsets: ['latin'],
@@ -18,6 +17,8 @@ const redressed = Redressed({
 
 const HomeComponent = () => {
   const router = useRouter();
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
   const judul = [
     {
       text: 'Undangan',
@@ -33,8 +34,27 @@ const HomeComponent = () => {
   const images = ['/home/Gallery_Photo_1.jpeg', '/home/Gallery_Photo_2.jpeg', '/home/Gallery_Photo_4.jpeg'];
 
   const OnClick = () => {
+    document.body.style.overflow = 'auto';
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
     router.push('#mempelai');
   };
+
+  useEffect(() => {
+    // Mengatur overflow menjadi hidden saat halaman pertama kali dimuat
+    document.body.style.overflow = 'hidden';
+
+    // Mengembalikan overflow menjadi auto saat komponen dilepas
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
   return (
     <ImagesSlider className="h-screen" images={images}>
       <motion.div
@@ -46,7 +66,7 @@ const HomeComponent = () => {
           ease: 'easeInOut',
         }}
         id="home"
-        className="absolute w-full top-[10%] flex flex-col items-center  text-center z-50 text-white "
+        className="absolute w-full top-[5%] flex flex-col items-center  text-center z-50 text-white "
       >
         <TypewriterEffect words={judul} />
         <div className=" w-full max-w-[50px] min-h-[100px] h-full  text-black bg-white rounded-full my-4">
@@ -72,13 +92,19 @@ const HomeComponent = () => {
         <Suspense fallback={<span>Loading...</span>}>
           <Undangan />
         </Suspense>
+        <p className="text-xs sm:text-sm">
+          Tanpa mengurangi rasa hormat, <br />
+          kami mengundang anda untuk menghadiri <br /> acara pernikahan kami.
+        </p>
         <div className="my-4 ">
-          <Button className="rounded-full bg-white hover:bg-white/50 text-black border border-blue-500" onClick={OnClick}>
+          <Button className="rounded-full bg-white hover:bg-transparent hover:text-white text-black border border-blue-500" onClick={OnClick}>
             {' '}
-            Lihat Undangan
+            <Mail size={20} className="mx-2" /> Lihat Undangan
           </Button>
         </div>
       </motion.div>
+
+      <audio ref={audioRef} src="/nano.mp3" />
     </ImagesSlider>
   );
 };
