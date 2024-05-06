@@ -5,6 +5,11 @@ import { FloatingNav } from '../ui/floating-nav';
 export function FloatingNavDemo() {
   const navItems = [
     {
+      name: 'Home',
+      link: '#home',
+      icon: <HomeIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+    {
       name: 'Mempelai',
       link: '#mempelai',
       icon: <User className="h-4 w-4 text-neutral-500 dark:text-white" />,

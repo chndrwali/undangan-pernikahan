@@ -102,7 +102,7 @@ const Location = () => {
               <iframe className="rounded-lg" src={mapUrl} width="300" height="200" style={{ border: 0 }} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div className="text-wrap pl-4 pr-4 italic w-full text-center mb-4 leading-tight max-w-[480px]">
-              <p>NoLimit Indonesia</p>
+              <p className="font-bold">NoLimit Indonesia</p>
               <CopyAlert description={`${Alamat}`} cp="Lokasi" />
             </div>
             <Button asChild className="rounded-full bg-white hover:bg-transparent hover:text-white text-black border border-blue-500 transition duration-300 ease-out mb-4">
@@ -119,7 +119,7 @@ const Location = () => {
               <iframe className="rounded-lg" src={mapUrl} width="300" height="200" style={{ border: 0 }} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div className="text-wrap pl-4 pr-4 italic w-full text-center mb-4 leading-tight max-w-[480px]">
-              <p>NoLimit Indonesia</p>
+              <p className="font-bold">NoLimit Indonesia</p>
               <CopyAlert description={`${Alamat}`} cp="Lokasi" />
             </div>
             <Button asChild className="rounded-full bg-white hover:bg-transparent hover:text-white text-black border border-blue-500 transition duration-300 ease-out mb-4">
