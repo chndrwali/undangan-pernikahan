@@ -98,7 +98,7 @@ const Greetings = () => {
                     <span className="font-bold">Putri dari pasangan</span>
                     <br /> Bapak Tatang <br /> &#38; Ibu Lilis Atikah{' '}
                   </p>
-                  <Link href="https://www.instagram.com/yuliynsrr/" target="_blank" className="flex justify-end items-center">
+                  <Link href="https://www.instagram.com/yuliynsrr/" target="_blank" className="flex justify-start items-center">
                     <Instagram size={15} />
                     <span className="ml-2">@yuliynsrr</span>
                   </Link>
