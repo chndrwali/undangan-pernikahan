@@ -29,21 +29,21 @@ const Greetings = () => {
   const ramdani = [
     {
       text: 'Ramdani ',
-      className: `${redressed.className} text-white font-bold text-end text-xl md:text-3xl lg:text-5xl`,
+      className: `${redressed.className} text-white font-bold  text-3xl md:text-4xl lg:text-5xl`,
     },
     {
       text: 'Aditia',
-      className: `${redressed.className} text-white font-bold text-end text-xl md:text-3xl lg:text-5xl`,
+      className: `${redressed.className} text-white font-bold  text-3xl md:text-4xl lg:text-5xl`,
     },
   ];
   const yuli = [
     {
       text: 'Yuliyana ',
-      className: `${redressed.className} text-white font-bold text-end text-xl md:text-3xl lg:text-5xl`,
+      className: `${redressed.className} text-white font-bold  text-3xl md:text-4xl lg:text-5xl`,
     },
     {
       text: 'Sari',
-      className: `${redressed.className} text-white font-bold text-end text-xl md:text-3xl lg:text-5xl`,
+      className: `${redressed.className} text-white font-bold  text-3xl md:text-4xl lg:text-5xl`,
     },
   ];
   const desc = 'Dengan segala puji bagi Allah yang telah menciptakan makhluk-Nya berpasang-pasangan, Ya Allah izinkanlah kami merangkaikan cinta yang Engkau berikan dalam ikatan pernikahan';
@@ -66,14 +66,9 @@ const Greetings = () => {
         </section>
 
         <section className="w-full sm:w-1/2 p-4">
-          <motion.div
-            className="w-full text-center sm:text-end leading-tight max-w-auto sm:max-w-[480px] mb-0 text-white"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }}
-          >
+          <motion.div className="w-full text-center sm:text-end  max-w-auto sm:max-w-[480px] mb-0 text-white" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }}>
             <div className="mb-2 ">
-              <TypewriterEffect words={ramdani} className="text-center sm:text-end my-4 sm:my-0" />
+              <TypewriterEffect words={ramdani} className="text-center sm:text-end mb-4 sm:my-0 " />
               <Separator className="hidden sm:block my-4" />
               <p className="text-sm md:text-base text-center sm:text-end">
                 <span className="font-bold">Putra dari pasangan</span>

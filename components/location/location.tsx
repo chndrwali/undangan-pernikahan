@@ -26,10 +26,12 @@ const Location = () => {
       className: 'text-blue-500',
     },
   ];
+
   return (
     <section id="lokasi" className="bg-black text-white bg-footer opacity-90 w-full h-screen flex flex-col items-center">
       <div className="mt-0 mb-8">
         <TypewriterEffect words={judul} />
+        <p className="text-center text-sm sm:text-xl">Minggu, 23 Juni 2024</p>
       </div>
       <div className="rounded-lg mb-4 shadow-2xl">
         <iframe className="rounded-lg" src={mapUrl} width="300" height="200" style={{ border: 0 }} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
