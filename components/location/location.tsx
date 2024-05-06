@@ -4,6 +4,14 @@ import Link from 'next/link';
 import { CopyAlert } from '../ui/copy-alert';
 import { TypewriterEffect } from '../ui/type-writter';
 import { useEffect, useState } from 'react';
+import { Navigation } from 'lucide-react';
+import { Button } from '../ui/button';
+import { Redressed } from 'next/font/google';
+
+const redressed = Redressed({
+  subsets: ['latin'],
+  weight: '400',
+});
 
 const Location = () => {
   const mapUrl =
@@ -60,42 +68,67 @@ const Location = () => {
     <section id="lokasi" className="bg-black text-white bg-footer opacity-90 w-full  flex flex-col items-center">
       <div className="mt-0 mb-8">
         <TypewriterEffect words={judul} />
-        <p className="text-center text-sm sm:text-xl my-2">Minggu, 23 Juni 2024</p>
-        <div className="grid grid-cols-2 sm:grid-cols-4 my-4 font-bold text-center">
+        <p className="text-center text-xl sm:text-2xl my-2">Minggu, 23 Juni 2024</p>
+        <div className="grid grid-cols-4 gap-4 sm:gap-10 sm:grid-cols-4 my-4 font-bold text-center text-2xl sm:text-3xl px-4 ">
           <div className="flex flex-col">
-            <span>{daysLeft}</span>
+            <span className="text-3xl sm:text-5xl">{daysLeft.toString().padStart(2, '0')}</span>
             Hari
           </div>
           <div className="flex flex-col">
-            <span>{hoursLeft}</span>
+            <span className="text-3xl sm:text-5xl">{hoursLeft.toString().padStart(2, '0')}</span>
             Jam
           </div>
           <div className="flex flex-col">
-            <span>{minutesLeft}</span>
+            <span className="text-3xl sm:text-5xl">{minutesLeft.toString().padStart(2, '0')}</span>
             Menit
           </div>
           <div className="flex flex-col">
-            <span>{secondsLeft}</span>
+            <span className="text-3xl sm:text-5xl">{secondsLeft.toString().padStart(2, '0')}</span>
             Detik{' '}
           </div>
         </div>
       </div>
       <div className="flex flex-col items-center ">
-        <h1 className="text-xl font-bold mb-4">Bertempat di</h1>
-        <div className="rounded-lg mb-4 shadow-2xl">
-          <iframe className="rounded-lg" src={mapUrl} width="300" height="200" style={{ border: 0 }} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        <p className="text-sm sm:text-xl font-bold mb-4 text-center">
+          Pernikahan adalah ibadah, dan setiap ibadah bermuara pada cinta-Nya sebagai tujuan. Sudah sewajarnya setiap upaya meraih <br />
+          cinta-Nya dilakukan dengan sukacita.
+        </p>
+        <div className="grid  grid-cols-1 sm:grid-cols-2 gap-4 p-4  mb-4 rounded-xl shadow-2xl border bg-black">
+          <div className="flex flex-col items-center">
+            <h1 className={`${redressed.className}  font-black text-3xl sm:text-5xl my-4`}>AKAD</h1>
+            <p>Minggu, 23 Juni 2024</p>
+            <p>08.00 WIB - Selesai</p>
+            <div className="rounded-lg mb-4 shadow-2xl">
+              <iframe className="rounded-lg" src={mapUrl} width="300" height="200" style={{ border: 0 }} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div className="text-wrap pl-4 pr-4 italic w-full text-center mb-4 leading-tight max-w-[480px]">
+              <p>NoLimit Indonesia</p>
+              <CopyAlert description={`${Alamat}`} cp="Lokasi" />
+            </div>
+            <Button asChild className="rounded-full bg-white hover:bg-transparent hover:text-white text-black border border-blue-500 transition duration-300 ease-out mb-4">
+              <Link href={shareUrl} target="_blank">
+                <Navigation size={15} className="mr-2" /> Petunjuk Lokasi
+              </Link>
+            </Button>
+          </div>
+          <div className="flex flex-col items-center">
+            <h1 className={`${redressed.className} font-black text-3xl sm:text-5xl my-4`}>RESEPSI</h1>
+            <p>Minggu, 23 Juni 2024</p>
+            <p>10.00 WIB - Selesai</p>
+            <div className="rounded-lg mb-4 shadow-2xl">
+              <iframe className="rounded-lg" src={mapUrl} width="300" height="200" style={{ border: 0 }} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div className="text-wrap pl-4 pr-4 italic w-full text-center mb-4 leading-tight max-w-[480px]">
+              <p>NoLimit Indonesia</p>
+              <CopyAlert description={`${Alamat}`} cp="Lokasi" />
+            </div>
+            <Button asChild className="rounded-full bg-white hover:bg-transparent hover:text-white text-black border border-blue-500 transition duration-300 ease-out mb-4">
+              <Link href={shareUrl} target="_blank">
+                <Navigation size={15} className="mr-2" /> Petunjuk Lokasi
+              </Link>
+            </Button>
+          </div>
         </div>
-        <div className="text-wrap pl-4 pr-4 italic w-full text-center mb-4 leading-tight max-w-[480px]">
-          <CopyAlert description={`${Alamat}`} cp="Lokasi" />
-        </div>
-
-        <Link
-          href={shareUrl}
-          target="_blank"
-          className="cursor-pointer capitalize relative flex items-center justify-content-center font-semibold border rounded-full px-4 text-base text-white bg-[#738e9b] min-h-[44px] min-w-[44px] hover:bg-cyan-700 hover:brightness-110 hover:translate-y-[1px] lg:mx-4 hover:shadow-xl hover:opacity-80 transition duration-300 ease-out"
-        >
-          Petunjuk Lokasi
-        </Link>
       </div>
     </section>
   );
