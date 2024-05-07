@@ -88,26 +88,22 @@ const HomeComponent = () => {
             transition={{ delay: 0.3, duration: 0.8, ease: 'backOut' }}
             className=" w-full max-w-[50px] min-h-[100px] h-full  text-black bg-white rounded-full my-4"
           >
-            <div className="flex flex-col items-center p-2 relative">
-              <motion.span initial={{ opacity: 0.0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="text-[1.7rem]">
+            <div className="flex flex-col items-center p-2">
+              <motion.span initial={{ opacity: 0.0, y: -40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="text-[1.7rem]">
                 R
               </motion.span>
               <motion.hr initial={{ opacity: 0.0, y: -40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="w-full h-[2px] border border-black" />
-              <motion.span initial={{ opacity: 0.0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="text-[1.7rem]">
+              <motion.span initial={{ opacity: 0.0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="text-[1.7rem]">
                 Y
               </motion.span>
             </div>
           </motion.div>
-          <div className={`${redressed.className} relative mb-4 font-bold text-2xl sm:text-3xl`}>
-            <motion.span initial={{ opacity: 0.0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }}>
-              Ramdani Aditia
-            </motion.span>
+          <div className={`${redressed.className} mb-4 font-bold text-2xl sm:text-3xl`}>
+            <span>Ramdani Aditia</span>
             <br />
-            <motion.span className="text-5xl">&#38;</motion.span>
+            <span className="text-5xl">&#38;</span>
             <br />
-            <motion.span initial={{ opacity: 0.0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }}>
-              Yuliyana Sari
-            </motion.span>
+            <span>Yuliyana Sari</span>
           </div>
           <p className="mb-6 text-base sm:text-xl">
             23 Juni 2024
@@ -122,7 +118,7 @@ const HomeComponent = () => {
             Tanpa mengurangi rasa hormat, <br />
             kami mengundang anda untuk menghadiri <br /> acara pernikahan kami.
           </p>
-          <motion.div initial={{ opacity: 0.0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="my-4 ">
+          <motion.div initial={{ opacity: 0.0, y: -40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="my-4 ">
             <Button className="rounded-full bg-white hover:bg-transparent hover:text-white text-black border border-blue-500" onClick={OnClick}>
               {' '}
               <Mail size={20} className="mx-2" />

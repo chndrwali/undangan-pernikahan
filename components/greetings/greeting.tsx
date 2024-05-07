@@ -60,7 +60,7 @@ const Greetings = () => {
         transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }}
       >
         <section className="w-full sm:w-1/2 p-4 flex justify-center sm:justify-start">
-          <motion.div initial={{ opacity: 0.0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="w-[200px] h-[300px] rounded-3xl overflow-hidden">
+          <motion.div initial={{ opacity: 0.0, y: -40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="w-[200px] h-[300px] rounded-3xl overflow-hidden">
             <Image alt="" src="/home/laki_latarbiru.webp" width={500} height={500} className="rounded-3xl" />
           </motion.div>
         </section>
@@ -70,7 +70,7 @@ const Greetings = () => {
             <div className="mb-2 ">
               <TypewriterEffect words={ramdani} className="text-center sm:text-end mb-4 sm:my-0 " />
               <Separator className="hidden sm:block my-4" />
-              <motion.p initial={{ opacity: 0.0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="text-sm md:text-base text-center sm:text-end">
+              <motion.p initial={{ opacity: 0.0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="text-sm md:text-base text-center sm:text-end">
                 <span className="font-bold">Putra dari pasangan</span>
                 <br /> Bapak Sodikin <br /> & Ibu Oneng{' '}
               </motion.p>
@@ -109,7 +109,7 @@ const Greetings = () => {
               </motion.p>
               <Link href="https://www.instagram.com/yuliynsrr/" target="_blank" className="flex justify-center sm:justify-start items-center">
                 <Instagram size={15} />
-                <motion.span initial={{ opacity: 0.0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="ml-2">
+                <motion.span initial={{ opacity: 0.0, y: -40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="ml-2">
                   @yuliynsrr
                 </motion.span>
               </Link>
@@ -117,7 +117,7 @@ const Greetings = () => {
           </motion.div>
         </section>
         <section className="w-full sm:w-1/2 p-4 flex justify-center sm:justify-end">
-          <motion.div initial={{ opacity: 0.0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="w-[200px] h-[300px] rounded-3xl overflow-hidden">
+          <motion.div initial={{ opacity: 0.0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="w-[200px] h-[300px] rounded-3xl overflow-hidden">
             <Image alt="" src="/home/cewe-latarbiru.webp" width={500} height={500} className="rounded-3xl" />
           </motion.div>
         </section>
