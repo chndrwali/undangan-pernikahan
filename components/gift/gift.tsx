@@ -1,13 +1,24 @@
 'use client';
 
+import * as React from 'react';
 import Image from 'next/image';
 import { TypewriterEffect } from '../ui/type-writter';
 import { Button } from '../ui/button';
 import { GiftIcon } from 'lucide-react';
 import { useState } from 'react';
-import { Dialog, DialogContent } from '@mui/material';
+import { Dialog, DialogContent, Slide } from '@mui/material';
 import { CopyAlert } from '../ui/copy-alert';
 import { motion } from 'framer-motion';
+import { TransitionProps } from '@mui/material/transitions';
+
+const Transition = React.forwardRef(function Transition(
+  props: TransitionProps & {
+    children: React.ReactElement<any, any>;
+  },
+  ref: React.Ref<unknown>
+) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
 
 const Gift = () => {
   const [openDialog, setOpenDialog] = useState(false);
@@ -67,9 +78,9 @@ const Gift = () => {
           </Button>
         </motion.div>
       </div>
-      <Dialog open={openDialog} onClose={handleCloseDialog}>
-        <DialogContent className="bg-white text-black ">
-          <div className="flex flex-col items-center">
+      <Dialog open={openDialog} fullWidth TransitionComponent={Transition} keepMounted onClose={handleCloseDialog}>
+        <DialogContent className="bg-white text-black">
+          <div className="flex flex-col items-center w-full max-w-xl">
             <TypewriterEffect words={payment} />
             <div className="flex flex-col sm:flex-row items-center mt-4">
               <div className="w-full max-w-24 rounded-2xl p-4 ">
