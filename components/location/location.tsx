@@ -69,29 +69,29 @@ const Location = () => {
     <section id="lokasi" className="bg-black text-white bg-footer opacity-90 w-full  flex flex-col items-center">
       <div className="mt-0 mb-8">
         <TypewriterEffect words={judul} />
-        <motion.p initial={{ opacity: 0.0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="text-center text-xl sm:text-2xl my-2">
+        <motion.p initial={{ opacity: 0.0, y: -40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="text-center text-xl sm:text-2xl my-2">
           Minggu, 23 Juni 2024
         </motion.p>
         <div className="grid grid-cols-4 gap-4 sm:gap-10 sm:grid-cols-4 my-4 font-bold text-center text-2xl sm:text-3xl px-4 ">
           <motion.div initial={{ opacity: 0.0, y: -40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="flex flex-col">
-            <motion.span initial={{ opacity: 0.0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="text-3xl sm:text-5xl">
+            <motion.span initial={{ opacity: 0.0, y: -40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="text-3xl sm:text-5xl">
               {daysLeft.toString().padStart(2, '0')}
             </motion.span>
             Hari
           </motion.div>
           <motion.div initial={{ opacity: 0.0, y: -40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="flex flex-col">
-            <motion.span initial={{ opacity: 0.0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="text-3xl sm:text-5xl">
+            <motion.span initial={{ opacity: 0.0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="text-3xl sm:text-5xl">
               {hoursLeft.toString().padStart(2, '0')}
             </motion.span>
             Jam
           </motion.div>
           <motion.div initial={{ opacity: 0.0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="flex flex-col">
-            <motion.span initial={{ opacity: 0.0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="text-3xl sm:text-5xl">
+            <motion.span initial={{ opacity: 0.0, y: -40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="text-3xl sm:text-5xl">
               {minutesLeft.toString().padStart(2, '0')}
             </motion.span>
             Menit
           </motion.div>
-          <motion.div initial={{ opacity: 0.0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="flex flex-col">
+          <motion.div initial={{ opacity: 0.0, y: -40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="flex flex-col">
             <motion.span initial={{ opacity: 0.0, y: -40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="text-3xl sm:text-5xl">
               {secondsLeft.toString().padStart(2, '0')}
             </motion.span>
@@ -106,7 +106,7 @@ const Location = () => {
         </motion.p>
         <div className="grid  grid-cols-1 sm:grid-cols-2 gap-4 p-4  mb-4 rounded-xl shadow-2xl border bg-black">
           <div className="flex flex-col items-center">
-            <motion.h1 initial={{ opacity: 0.0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className={`${redressed.className}  font-black text-3xl sm:text-5xl my-4`}>
+            <motion.h1 initial={{ opacity: 0.0, y: -40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className={`${redressed.className}  font-black text-3xl sm:text-5xl my-4`}>
               AKAD
             </motion.h1>
             <div className="mb-4">

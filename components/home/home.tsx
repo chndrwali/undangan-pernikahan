@@ -89,11 +89,11 @@ const HomeComponent = () => {
             className=" w-full max-w-[50px] min-h-[100px] h-full  text-black bg-white rounded-full my-4"
           >
             <div className="flex flex-col items-center p-2">
-              <motion.span initial={{ opacity: 0.0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="text-[1.7rem]">
+              <motion.span initial={{ opacity: 0.0, y: -40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="text-[1.7rem]">
                 R
               </motion.span>
               <motion.hr initial={{ opacity: 0.0, y: -40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="w-full h-[2px] border border-black" />
-              <motion.span initial={{ opacity: 0.0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="text-[1.7rem]">
+              <motion.span initial={{ opacity: 0.0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="text-[1.7rem]">
                 Y
               </motion.span>
             </div>
