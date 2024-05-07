@@ -1,9 +1,8 @@
 'use client';
-import React, { useState, useRef, useEffect } from 'react';
-import { LayoutGrid } from '../ui/layout-grid';
-import { TypewriterEffect } from '../ui/type-writter';
+
 import { motion } from 'framer-motion';
-import { ParallaxScroll } from '../ui/paralax-scroll';
+import { TypewriterEffect } from '@/components/ui/type-writter';
+import { ParallaxScroll } from '@/components/ui/paralax-scroll';
 
 export default function Gallery() {
   const judul = [

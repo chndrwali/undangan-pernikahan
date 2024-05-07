@@ -2,12 +2,8 @@
 
 import { Suspense, useEffect, useRef, useState } from 'react';
 import { Redressed } from 'next/font/google';
-import { delay, motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import Undangan from '@/components/home/undangan';
-import { TypewriterEffect } from '../ui/type-writter';
-import { ImagesSlider } from '../ui/image-slider';
 import { useRouter } from 'next/navigation';
+import { motion } from 'framer-motion';
 import { Mail } from 'lucide-react';
 import MusicButton from './music-button';
 import Greetings from '../greetings/greeting';
@@ -17,6 +13,10 @@ import Location from '../location/location';
 import Footer from '../Footer/footer';
 import Gift from '../gift/gift';
 import Thanks from '../thanks/thanks';
+import Undangan from '@/components/home/undangan';
+import { TypewriterEffect } from '@/components/ui/type-writter';
+import { ImagesSlider } from '@/components/ui/image-slider';
+import { Button } from '@/components/ui/button';
 
 const redressed = Redressed({
   subsets: ['latin'],
@@ -118,7 +118,7 @@ const HomeComponent = () => {
             Tanpa mengurangi rasa hormat, <br />
             kami mengundang anda untuk menghadiri <br /> acara pernikahan kami.
           </p>
-          <motion.div initial={{ opacity: 0.0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="my-4 ">
+          <motion.div initial={{ opacity: 0.0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: 'easeInOut' }} className="my-4 ">
             <Button className="rounded-full bg-white hover:bg-transparent hover:text-white text-black border border-blue-500" onClick={OnClick}>
               {' '}
               <Mail size={20} className="mx-2" />
